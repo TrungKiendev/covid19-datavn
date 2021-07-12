@@ -19,7 +19,7 @@ app.use("/ig",ForinstaGram)
 
 
 //Getting Complete Data WorldWide
-app.get("/", (req, res) => {
+app.get("/all", (req, res) => {
   //Fetch Api
   fetch('https://disease.sh/v2/all')
     .then(res => res.json())
@@ -40,7 +40,7 @@ app.get("/", (req, res) => {
 })
 
 //Getting Latest Data Worldwide
-app.get("/latest", (req, res) => {
+app.get("/moinhat", (req, res) => {
   fetch('https://disease.sh/v2/all')
     .catch(err =>{
       res.send("Error Occured")
@@ -50,7 +50,7 @@ app.get("/latest", (req, res) => {
       if (response.ok) {
         return response.json()
       } else {
-        return res.json("error: Something is wrong.")
+        return res.json("error: KHÔNG CÓ DỮ LIỆU.")
       }
     })
     .then(data => {
@@ -69,7 +69,7 @@ app.get("/latest", (req, res) => {
 })
 
 //Getting complete data for a specific country
-app.get("/country/:id", (req, res) => {
+app.get("/cacnuoc/:id", (req, res) => {
   var country = req.params.id;
   fetch(`https://disease.sh/v2/countries/${country}`)
     .catch(err => {
@@ -80,7 +80,7 @@ app.get("/country/:id", (req, res) => {
       if(!response.ok){
         res.sendStatus(404)
         res.json({
-          error: "Couldn't find Country"
+          error: "Sai Khí tự các nước."
         })
         return;
       }
@@ -102,7 +102,7 @@ app.get("/country/:id", (req, res) => {
 })
 
 //Getting Latest Stats for a specific country
-app.get("/country/:id/latest",(req,res)=> getCountryLatest(req,res))
+app.get("/nuoc/:id/moinhat",(req,res)=> getCountryLatest(req,res))
 //Specified 2 routes for my personal use :)
 app.get("/latest/:id", (req,res)=> getCountryLatest(req,res))
 
@@ -118,7 +118,7 @@ var getCountryLatest = (req, res) => {
       if(!response.ok){
         res.sendStatus(404)
         res.json({
-          error: "Couldn't find Country"
+          error: "Sai Khí tự các nước."
         })
         return;
       }
