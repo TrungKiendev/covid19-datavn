@@ -21,7 +21,7 @@ function numberWithCommas(x) {
               background: white;
               color: #323232;
               font-family: roboto, sans-serif;
-              background: url("https://cdn.statically.io/gh/PiyushSuthar/Covid-19-Image-Api/36950d90/public/corona.png");
+              background: url("https://i.imgur.com/PQvGjtf.png");
               background-repeat: no-repeat;
               background-size: auto;
             }
@@ -66,24 +66,24 @@ function numberWithCommas(x) {
           </style>
           <div class="outer">
             <div class="head">
-              <h1>${country === "" ? "" : `${country}'s `}Covid-19 Stats</h1>
+              <h1>${country === "" ? "" : `${country}'s `} Thống Kê Covid-19</h1>
             </div>
             <div class="inner">
               <div class="total-cases">
-                <h3>${live === "true" ? "Today" : "Total"} Cases</h3>
+                <h3>${live === "true" ? "Today" : "Bị"} Nhiễm</h3>
                 <h1>${live === "true" ? numberWithCommas(data.todayCases) : numberWithCommas(data.cases)}</h1>
               </div>
               <div class="total-deaths">
-                <h3>${live === "true" ? "Today" : "Total"} Deaths</h3>
+                <h3>${live === "true" ? "Today" : "Tử"} Vong</h3>
                 <h1>${live === "true" ? numberWithCommas(data.todayDeaths) : numberWithCommas(data.deaths)}</h1>
               </div>
               <div class="total-recovered">
-                <h3>${live === "true" ? "Today" : "Total"} Recovered</h3>
+                <h3>${live === "true" ? "Today" : "Bình"} Phục</h3>
                 <h1>${live === "true" ? numberWithCommas(data.todayRecovered) : numberWithCommas(data.recovered)}</h1>
               </div>
             </div>
             <div class="footer">
-              <h3>Made with <span style="color:red;">❤</span> by @PiyushSthr</h3>
+              <h3>Facebook<span style="color:red;">❤</span>Trung Kiên</h3>
             </div>
           </div>
         </body>
@@ -102,7 +102,7 @@ function numberWithCommas(x) {
           background: white;
           color: #323232;
           font-family: roboto, sans-serif;
-          background: url("https://cdn.statically.io/gh/PiyushSuthar/Covid-19-Image-Api/36950d90/public/corona.png");
+          background: url("https://i.imgur.com/PQvGjtf.png");
           background-repeat: no-repeat;
           background-size: cover;
         }
@@ -147,25 +147,25 @@ function numberWithCommas(x) {
       </style>
       <div class="outer">
         <div class="head">
-          <h1>${country === "" ? "" : `${country}'s `}Covid-19 Stats</h1>
+          <h1>${country === "" ? "" : `${country}'s `}Thống Kê Covid-19</h1>
         </div>
         <div class="inner">
           <div class="total-cases">
-            <h3>${live === "true" ? "Today" : "Total"} Cases</h3>
+            <h3>${live === "true" ? "Today" : "Bị"} Nhiễm</h3>
             <h1>
               ${live === "true" ? numberWithCommas(data.todayCases) :
               numberWithCommas(data.cases)}
             </h1>
           </div>
           <div class="total-deaths">
-            <h3>${live === "true" ? "Today" : "Total"} Deaths</h3>
+            <h3>${live === "true" ? "Today" : "Tử"} Vong</h3>
             <h1>
               ${live === "true" ? numberWithCommas(data.todayDeaths) :
               numberWithCommas(data.deaths)}
             </h1>
           </div>
           <div class="total-recovered">
-            <h3>${live === "true" ? "Today" : "Total"} Recovered</h3>
+            <h3>${live === "true" ? "Today" : "Bình"} Phục</h3>
             <h1>
               ${live === "true" ? numberWithCommas(data.todayRecovered) :
               numberWithCommas(data.recovered)}
@@ -173,7 +173,7 @@ function numberWithCommas(x) {
           </div>
         </div>
         <div class="footer">
-          <h3>Made with <span style="color:red;">❤</span> by @PiyushSthr</h3>
+          <h3>Facebook<span style="color:red;">❤</span>Trung Kiên</h3>
         </div>
       </div>
     </body>
